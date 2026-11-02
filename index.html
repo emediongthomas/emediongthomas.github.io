@@ -61,7 +61,23 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
             <a class="text-link" href="mailto:thomasemediong08@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+            <button class="button button-voice" type="button" aria-describedby="voice-intro-status">
+              <span class="voice-icon" aria-hidden="true">▶</span>
+              <span class="voice-button-label">Listen to intro</span>
+            </button>
+            <button class="button button-music" type="button" aria-describedby="background-music-status">
+              <span class="music-icon" aria-hidden="true">♫</span>
+              <span class="music-button-label">Play background music</span>
+            </button>
           </div>
+          <audio id="voice-intro-audio" preload="metadata">
+            <source src="assets/intro.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="background-music-audio" loop preload="none" data-volume="0.16">
+            <source src="assets/background-music.mp3" type="audio/mpeg">
+          </audio>
+          <p class="sr-only" id="voice-intro-status" role="status" aria-live="polite"></p>
+          <p class="sr-only" id="background-music-status" role="status" aria-live="polite"></p>
           <div class="hero-footnote">
             <span class="availability"><span class="status-dot"></span> Open to software engineering opportunities</span>
             <span class="hero-index">01 — 04</span>
@@ -166,10 +182,10 @@
           </div>
 
           <div class="impact-strip" aria-label="Career highlights">
-            <div class="impact-item"><strong>1M<span>+</span></strong><span>daily requests handled</span></div>
-            <div class="impact-item"><strong>30<span>%</span></strong><span>faster response times</span></div>
-            <div class="impact-item"><strong>15<span>+</span></strong><span>features shipped</span></div>
-            <div class="impact-item"><strong>2</strong><span>engineers mentored</span></div>
+            <div class="impact-item"><strong><span class="impact-count" data-count="1000000" data-format="millions">1M</span><span>+</span></strong><span>daily requests handled</span></div>
+            <div class="impact-item"><strong><span class="impact-count" data-count="80">80</span><span>%</span></strong><span>faster response times</span></div>
+            <div class="impact-item"><strong><span class="impact-count" data-count="15">15</span><span>+</span></strong><span>features shipped</span></div>
+            <div class="impact-item"><strong><span class="impact-count" data-count="2">2</span></strong><span>engineers mentored</span></div>
           </div>
 
           <div class="timeline">
@@ -179,7 +195,7 @@
                 <h3>Software Engineer <span>@ Nsibason Entreprises</span></h3>
                 <p class="timeline-location">Uyo, Akwa Ibom State</p>
                 <ul>
-                  <li>Built microservices handling 1M+ daily requests, improving response time by 30%.</li>
+                  <li>Built microservices handling 1M+ daily requests, improving response time by 80%.</li>
                   <li>Shipped 15+ customer-facing features with product and design teams, increasing engagement by 20%.</li>
                   <li>Migrated legacy components to containerized services, reducing deployment time by 40%.</li>
                   <li>Mentored two junior engineers through code reviews and pair programming.</li>
@@ -243,6 +259,7 @@
             <button class="copy-email" type="button" data-email="thomasemediong08@gmail.com">Copy email <span aria-hidden="true">⧉</span></button>
             <div class="social-links">
               <a href="https://github.com/Emizzyg" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://wa.me/2347044378189" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
               <a href="mailto:thomasemediong08@gmail.com">Email <span aria-hidden="true">↗</span></a>
             </div>
           </div>
@@ -252,7 +269,7 @@
 
     <footer class="site-footer">
       <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-mark">ET</span><span>Emediong Nsima Thomas</span></a>
-      <span class="footer-note">DESIGNED & BUILT WITH INTENTION.</span>
+      <a class="footer-note" href="https://commons.wikimedia.org/wiki/File:Hypnotic_ambient_electronic_music_by_MusicLM.mp3" target="_blank" rel="noopener noreferrer">AMBIENT MUSIC: MUSICLM <span aria-hidden="true">↗</span></a>
       <span class="footer-copyright">© <span id="current-year"></span> EMEDIONG NSIMA THOMAS</span>
     </footer>
     <div class="toast" role="status" aria-live="polite"></div>
