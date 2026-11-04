@@ -78,10 +78,6 @@ html[data-theme="dark"] .theme-icon-moon { display: block; }
 .button-voice:hover:not(:disabled) { border-color: var(--ink); background: var(--surface); }
 .button-voice:disabled { cursor: not-allowed; opacity: .6; }
 .voice-icon { color: #749d32; font-size: 10px; }
-.button-music { min-height: 40px; gap: 9px; padding-inline: 12px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; font-size: 11px; transition: background .2s, border-color .2s, color .2s; }
-.button-music:hover:not(:disabled), .button-music[aria-pressed="true"] { border-color: var(--ink); background: var(--surface); color: var(--ink); }
-.button-music:disabled { cursor: not-allowed; opacity: .6; }
-.music-icon { color: #829e4b; font-size: 14px; }
 .text-link { padding-bottom: 4px; border-bottom: 1px solid var(--line); font-size: 12px; font-weight: 600; transition: border-color .2s; }
 .text-link:hover { border-color: var(--ink); }
 .hero-footnote { display: flex; justify-content: space-between; margin-top: 70px; color: var(--muted); font-family: var(--mono); font-size: 9px; letter-spacing: .015em; }

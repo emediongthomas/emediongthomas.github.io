@@ -18,8 +18,7 @@ Then visit <http://localhost:8000>.
 - Light/dark theme toggle, saved in the browser when storage is available
 - Project filters, contact links, and copy-email button
 - Profile portrait in `assets/profile-photo.jpg`
-- Click-to-play personal voice introduction in `assets/intro.mp3`
-- Optional background music in `assets/background-music.mp3`; visitors start it themselves. Ambient track: MusicLM, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hypnotic_ambient_electronic_music_by_MusicLM.mp3), marked public domain.
+- Click-to-play AI-generated male voice introduction in `assets/intro-ai.wav`
 - Keyboard skip link, focus styles, and reduced-motion support
 
 ## Before publishing
