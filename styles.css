@@ -67,8 +67,9 @@ html[data-theme="dark"] .theme-icon-moon { display: block; }
 .eyebrow-divider { padding-inline: 5px; color: #a5a89e; }
 .status-dot, .sandbox-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #89b640; box-shadow: 0 0 0 3px color-mix(in srgb, #89b640 18%, transparent); }
 .hero h1 { margin: 0; font-size: clamp(58px, 7.3vw, 94px); font-weight: 600; letter-spacing: -.082em; line-height: .98; }
-.highlight-word { color: #749d32; }
+.highlight-word { display: inline-block; color: #749d32; animation: word-arrive .8s cubic-bezier(.2, .75, .25, 1) both; }
 .period { color: var(--accent); }
+@keyframes word-arrive { from { opacity: 0; transform: translateY(.35em); } to { opacity: 1; transform: translateY(0); } }
 .hero-description { max-width: 465px; margin: 25px 0 28px; color: var(--muted); font-size: 16px; line-height: 1.8; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; }
 .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 17px; padding: 0 19px; font-size: 12px; font-weight: 600; }
@@ -85,9 +86,23 @@ html[data-theme="dark"] .theme-icon-moon { display: block; }
 .availability .status-dot { width: 6px; height: 6px; }
 .hero-index { color: #9a9d94; }
 .hero-portrait { position: relative; width: 100%; max-width: 430px; aspect-ratio: .91 / 1; justify-self: end; margin: 0 12px 12px 0; background: var(--surface); }
+.hero-portrait:focus-visible { outline: 2px solid #6c8835; outline-offset: 7px; }
 .hero-portrait::before { position: absolute; z-index: 0; inset: 12px -12px -12px 12px; background: var(--accent); content: ""; }
 .hero-portrait::after { position: absolute; z-index: 1; inset: 0; border: 1px solid #fff9; content: ""; pointer-events: none; }
 .hero-portrait img { position: relative; z-index: 1; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.portrait-languages { position: absolute; z-index: 3; inset: 0; pointer-events: none; }
+.language-logo { position: absolute; display: grid; min-width: 43px; height: 43px; place-items: center; padding-inline: 5px; border: 1px solid #ffffffa8; border-radius: 50%; box-shadow: 0 7px 22px #20271f26; color: #fff; font-family: var(--mono); font-size: 11px; font-weight: 500; opacity: 0; transform: scale(.65) translateY(8px); transition: opacity .25s, transform .35s cubic-bezier(.2, .75, .25, 1); }
+.language-logo-js { top: 37%; left: -22px; background: #d6a900; }
+.language-logo-python { top: 8%; right: 12%; background: #3572a5; }
+.language-logo-typescript { top: 43%; right: -20px; background: #3178c6; }
+.language-logo-java { bottom: 23%; left: -19px; background: #a64b37; }
+.language-logo-sql { right: 16%; bottom: 16%; background: #596778; }
+.hero-portrait:is(:hover, :focus-visible) .language-logo { opacity: 1; transform: scale(1) translateY(0); animation: language-float 2.8s ease-in-out infinite alternate; }
+.hero-portrait:is(:hover, :focus-visible) .language-logo-python { animation-delay: -.6s; }
+.hero-portrait:is(:hover, :focus-visible) .language-logo-typescript { animation-delay: -.3s; }
+.hero-portrait:is(:hover, :focus-visible) .language-logo-java { animation-delay: -.9s; }
+.hero-portrait:is(:hover, :focus-visible) .language-logo-sql { animation-delay: -.45s; }
+@keyframes language-float { to { translate: 0 -7px; } }
 .portrait-caption { position: absolute; z-index: 2; right: -12px; bottom: 18px; display: flex; align-items: center; gap: 9px; padding: 10px 13px; background: var(--card); box-shadow: 0 5px 25px #20271f12; color: var(--ink); font-family: var(--mono); font-size: 8px; letter-spacing: .04em; }
 .portrait-caption .status-dot { width: 6px; height: 6px; }
 .portrait-caption-divider { color: #a5a89e; }
@@ -286,6 +301,8 @@ html[data-theme="dark"] .theme-icon-moon { display: block; }
   .hero-footnote { margin-top: 45px; font-size: 8px; }
   .hero-index { display: none; }
   .hero-portrait { width: calc(100% - 12px); max-width: 430px; aspect-ratio: .96 / 1; justify-self: center; }
+  .language-logo-js, .language-logo-java { left: -10px; }
+  .language-logo-typescript { right: -10px; }
   .ticker-track { min-height: 47px; font-size: 9px; }
   .work-section { padding-block: 75px 80px; }
   .section-heading { align-items: start; flex-direction: column; gap: 14px; }

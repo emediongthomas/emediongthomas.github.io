@@ -17,7 +17,7 @@ Then visit <http://localhost:8000>.
 - Responsive layout and mobile navigation
 - Light/dark theme toggle, saved in the browser when storage is available
 - Project filters, contact links, and copy-email button
-- Profile portrait in `assets/profile-photo.png`
+- Profile portrait in `assets/profile-photo.jpg`, with hover/focus language badges
 - Click-to-play AI-generated male voice introduction in `assets/intro-ai.wav`
 - Keyboard skip link, focus styles, and reduced-motion support
 
